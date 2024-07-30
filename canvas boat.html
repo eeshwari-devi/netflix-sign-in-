@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<canvas id="boatcanvas" width="500" height="400" style="border:1px solid black"></canvas>
+<script>
+    
+
+    var canvas=document.getElementById("boatcanvas");
+    var ctx=canvas.getContext("2d");
+   
+    function drawBoat(){
+    ctx.beginPath();
+    ctx.moveTo(150,300);  // starting point
+    ctx.lineTo(350,300); // bottom line
+    ctx.lineTo(400,350); // right slope
+    ctx.lineTo(100,350); // left slope
+    ctx.closePath();
+    ctx.fillStyle="blue";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(250,300);  // starting point
+    ctx.lineTo(250,150); // bottom line
+   ctx.lineWidth=5;
+    ctx.closePath();
+    ctx.strokeStyle="red"
+    ctx.stroke();
+
+
+
+
+    ctx.beginPath();
+    ctx.moveTo(250,150);  // starting point
+    ctx.lineTo(350,250); // bottom line
+    ctx.lineTo(250,250); // right slope
+    ctx.closePath();
+    ctx.fillStyle="brown";
+    ctx.fill();   
+    }
+   drawBoat();
+</script>
+
+</body>
+</html>

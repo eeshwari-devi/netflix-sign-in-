@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="boat" width="700px" height="600px" style="border: 2px solid black;"> </canvas>
+    
+    <script>
+        var canvas = document.getElementById("boat");
+        var ctx = canvas.getContext("2d");
+
+        
+        //boat
+        ctx.beginPath();
+        ctx.arc(300, 200, 200, 0, Math.PI);
+        ctx.fillStyle = "brown";
+        ctx.fill();
+
+        //flag
+        ctx.fillStyle = 'black'; 
+                    ctx.beginPath();
+                   ctx.moveTo(200, 80);
+                    ctx.lineTo(300, 150);
+                    ctx.lineTo(200, 150);
+                    ctx.closePath();
+                    ctx.fill();
+
+                    //flag pole
+                    ctx.fillStyle = '#808080'; 
+                    ctx.fillRect(200, 80, 5, 220);
+
+   
+
+        </script>
+        
+</body>
+</html>
